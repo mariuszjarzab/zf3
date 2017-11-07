@@ -58,7 +58,6 @@ class CommandService
         if (FALSE === class_exists($commandClassName)) {
             throw new \InvalidArgumentException('Invalid class name');
         }
-
         // create Command
         $reflector = new \ReflectionClass($commandClassName);
         $command   = $reflector->newInstanceArgs($arguments);
